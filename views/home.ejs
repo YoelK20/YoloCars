@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Sales Landing Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .landing-page {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 100vh;
+      background: url('http://localhost:3000/landing.jpg') no-repeat center center/cover;
+      color: #fff;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      margin-right: 50px;
+      text-align: right;
+    }
+
+    .content h1 {
+      font-size: 3rem;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .content p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+    }
+
+    .content .btn-start {
+      font-size: 1.2rem;
+      padding: 10px 30px;
+      border-radius: 30px;
+      border: none;
+      background-color: #ff5733;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+
+    .content .btn-start:hover {
+      background-color: #c70039;
+    }
+  </style>
+</head>
+<body>
+  <div class="landing-page">
+    <div class="overlay"></div>
+    <div class="content">
+      <p class="contact">Contact us <br>
+        +1234568000
+      </p>
+      <h1>Welcome to <span style="font-family:Georgia, 'Times New Roman', Times, serif;">Yolo </span>Car <br>Sales</h1>
+      <p>You Only Live Once, <br>
+        so Find Your Dream Car Today</p>
+
+      <a href="/login"><button class="btn-start">Start</button></a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

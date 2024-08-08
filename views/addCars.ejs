@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Cars</title>
+</head>
+<body>
+    <h1>Add Cars</h1>
+    <a href="/admin/list"><button>Car List</button></a>
+    <form action="/admin/add" method="post">
+        <div>
+            <label>Brand</label>
+            <input type="text" name="brand" autocomplete="off">
+        </div>
+        <div>
+            <label>Model</label>
+            <input type="text" name="model" autocomplete="off">
+        </div>
+        <div>
+            <label>Released Date</label>
+            <input type="date" name="released_date">
+        </div>
+        <div>
+            <label>Image Url</label>
+            <input type="text" name="imageUrl">
+        </div>
+        <div>
+            <label>Color</label>
+            <input type="text" name="color">
+        </div>
+        <div>
+            <label>Price</label>
+            <input type="number" name="price">
+        </div>
+        <div><button type="submit">Post</button></div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Cars</title>
+</head>
+<body>
+    <h1>Update Cars</h1>
+    <form action="/admin/<%= data.id %>/edit" method="post">
+        <div>
+            <label>Brand</label>
+            <input type="text" name="brand" value="<%= data.brand %>" autocomplete="off">
+        </div>
+        <div>
+            <label>Model</label>
+            <input type="text" name="model" value="<%= data.model %>" autocomplete="off">
+        </div>
+        <div>
+            <label>Released Date</label>
+            <input type="date" name="released_date" value="<%= data.released_date.toISOString().split("T")[0] %>">
+        </div>
+        <div>
+            <label>Image Url</label>
+            <input type="text" name="imageUrl" value="<%= data.imageUrl %>">
+        </div>
+        <div>
+            <label>Color</label>
+            <input type="text" name="color" value="<%= data.color %>">
+        </div>
+        <div>
+            <label>Price</label>
+            <input type="number" name="price" value="<%= data.price %>">
+        </div>
+        <div>
+            <label>Status</label>
+            <input type="radio" name="status" value="true" <%= data.status === true ? "checked" : ""%>>True
+            <input type="radio" name="status" value="false" <%= data.status === false ? "checked" : ""%>>False
+        </div>
+        <div><button type="submit">Post</button></div>
+    </form>
+</body>
+</html>
